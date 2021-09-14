@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+</head>
+
+<body id="screen">
+<u><i><strong><h1>WELCOME!!!!</h1></strong></i></u>
+<p>Simple Calculator</p>
+<p align="center">Question : <input name="a" id="a"></p>
+<p align="center"><button onclick="calc()">Compute</button></p>
+<p align="center" id="b"></p>
+<script>
+function calc()
+{
+var x = document.getElementById('a').value;
+var y = eval(x);
+document.getElementById('b').innerHTML = (x+"="+y);
+}
+</script>
+<button onclick="changebgColor()">Change background color</button>
+<style>
+body{
+text-align: center;
+}
+p{
+font-size: 30px;
+}
+</style>
+<script>
+var c = [ "green", "cyan", "purple", "blue", "orange", "red", "indigo", "violet", "pink", "gray", "lime", "white", "navy", "coral", "gold" ];
+var i = 0;
+function changebgColor(){
+if (i > 12){
+i = 0;
+}
+document.getElementById("screen").style.backgroundColor= c[i];
+i++;
+}
+</script>
+</body>
+
+</html>
